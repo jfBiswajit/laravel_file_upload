@@ -1,0 +1,6 @@
+// Create stored location
+$path = 'public/img';
+// Generate file name with extention
+$file_name = strtolower(str::random(4)) . '.' . $request->file('file')->extension();
+// Store
+$request->file('name')->storeAs($path, $file_name);
